@@ -44,7 +44,7 @@ Traditional language models can hallucinate or provide vague answers — a criti
 
 ## 🎥 Demo Preview
 
-> [🔗 https://www.loom.com/share/8ce0110505694625a131d1c58dc22f6d?sid=834f5eb0-063a-4c9c-89f9-5881b98bb2e4]
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/8ce0110505694625a131d1c58dc22f6d?sid=0954c345-eff7-4da6-b8da-32463a9a8a53" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ---
 
