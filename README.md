@@ -51,29 +51,30 @@ Traditional language models can hallucinate or provide vague answers — a criti
 ## ⚙️ Local Setup
 
 ### 1. Clone the repository
-
-```git clone https://github.com/tmach22/ContractClauseFinder_v1.git
+```
+git clone https://github.com/tmach22/ContractClauseFinder_v1.git
 cd ContractClauseFinder_v1
-
+```
 ### 2. Create virtual env
-
+```
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
-
+```
 ### 3. Install dependencies
-
+```
 pip install -r requirements.txt
-
+```
 ### 4. Create a .env file for secrets
-
+```
 OPENROUTER_API_KEY=your_openrouter_key
 QDRANT_API_KEY=your_qdrant_key
 QDRANT_URL=https://your-qdrant-instance.qdrant.tech
-
+```
 ### 5. Run the backend
-
+```
 uvicorn main:app --reload
-
+```
 ### 6. Run the StreamLit frontend
-
+```
 streamlit run app.py
+```
