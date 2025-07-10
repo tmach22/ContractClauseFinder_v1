@@ -44,13 +44,36 @@ Traditional language models can hallucinate or provide vague answers — a criti
 
 ## 🎥 Demo Preview
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/8ce0110505694625a131d1c58dc22f6d?sid=0954c345-eff7-4da6-b8da-32463a9a8a53" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+🔗 https://www.loom.com/share/8ce0110505694625a131d1c58dc22f6d?sid=8525131a-3124-4a29-89bc-093c8750ce69
 
 ---
 
 ## ⚙️ Local Setup
 
 ### 1. Clone the repository
-```bash
+
 git clone https://github.com/tmach22/ContractClauseFinder_v1.git
 cd ContractClauseFinder_v1
+
+### 2. Create virtual env
+
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+### 3. Install dependencies
+
+pip install -r requirements.txt
+
+### 4. Create a .env file for secrets
+
+OPENROUTER_API_KEY=your_openrouter_key
+QDRANT_API_KEY=your_qdrant_key
+QDRANT_URL=https://your-qdrant-instance.qdrant.tech
+
+### 5. Run the backend
+
+uvicorn main:app --reload
+
+### 6. Run the StreamLit frontend
+
+streamlit run app.py
