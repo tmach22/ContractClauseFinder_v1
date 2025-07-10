@@ -52,7 +52,7 @@ Traditional language models can hallucinate or provide vague answers — a criti
 
 ### 1. Clone the repository
 
-git clone https://github.com/tmach22/ContractClauseFinder_v1.git
+```git clone https://github.com/tmach22/ContractClauseFinder_v1.git
 cd ContractClauseFinder_v1
 
 ### 2. Create virtual env
