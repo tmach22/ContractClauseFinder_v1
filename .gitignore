@@ -1,0 +1,22 @@
+# Ignore Python virtual environments
+venv/
+.venv/
+
+# Ignore bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore logs and streamlit config
+*.log
+.streamlit/config.toml
+
+# Ignore environment variables
+.env
+.env.*
+
+# Ignore OS and editor files
+.DS_Store
+*.swp
+.idea/
+.vscode/
