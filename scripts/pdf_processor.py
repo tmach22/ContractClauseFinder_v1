@@ -62,7 +62,7 @@ def chunk_into_clauses(text, min_length=250):
     return clauses
 
 class BGE_Encoder:
-    def __init__(self, model_name='BAAI/bge-base-en-v1.5'):
+    def __init__(self, model_name='BAAI/bge-small-en-v1.5'):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = SentenceTransformer(model_name, device=self.device)
 
