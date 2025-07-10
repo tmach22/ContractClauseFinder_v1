@@ -25,14 +25,15 @@ async def upload_file(file: UploadFile = File(...)):
 
         embeddings = bge.encode(clauses, batch_size=32, normalise=True)
 
-        client = connect_qdrant(vector_size=768, recreate=True)
-        store_embeddings_in_qdrant(client, embeddings, clauses)
+        client = connect_qdrant(vector_size=768, recreate=True, collection_name=file.filename)
+        clauses_stored = store_embeddings_in_qdrant(client, embeddings, clauses, file.filename)
         
         # Return the filename and content type
         return JSONResponse(content={
             "filename": file.filename,
             "content_type": file.content_type,
-            "size": len(content)
+            "size": len(content),
+            "clauses_stored": clauses_stored
         })
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
@@ -47,7 +48,7 @@ async def query_collection(req: Q):
 
         client = connect_qdrant(recreate=False)
 
-        results = search_collection(client, query_vector, top_k=req.top_k)
+        results = search_collection(client, query_vector, top_k=req.top_k, collection_name=req.collection_name)
 
         response = generate_response(req.query, [r['clause'] for r in results])
 

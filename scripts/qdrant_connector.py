@@ -57,6 +57,7 @@ def store_embeddings_in_qdrant(client, embeddings, clauses, collection_name=cons
     )
 
     print(f"Stored {len(points)} clauses in Qdrant.")
+    return len(points)
 
 def search_collection(client, query_vector, top_k=5, collection_name=constants["collection_name"]):
     """
